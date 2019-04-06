@@ -13,7 +13,7 @@
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>com.ukie.be</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,11 +21,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1</string>
+	<string>1.0.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0.4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -34,25 +34,29 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Camera kan gebruikt worden om foto's te delen</string>
+	<string>U kan de camera gebruiken om foto's te delen met anderen</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Het weerbericht en locatiegebonden notificaties hebben uw locatie nodig</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Locatiegerelateerde functies</string>
+	<string>Functies zoals het weerbericht hebben uw locatie nodig.</string>
 	<key>NSMainNibFile~ipad</key>
 	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Voicecontests</string>
+	<string>U kan de microfoon gebruiken om klanten te delen met anderen</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Fotogalerij kan gebruikt worden om foto's te delen</string>
+	<string>U kan de fotogalerij gebruiken om foto's te delen met anderen</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>CDVLaunchScreen</string>
 	<key>UIRequiresFullScreen</key>
 	<true/>
 	<key>UIStatusBarHidden</key>
-	<true/>
+	<false/>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleBlackOpaque</string>
+	<string>UIStatusBarStyleBlackTranslucent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -64,5 +68,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

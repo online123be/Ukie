@@ -2,55 +2,57 @@
 <html>
     <head>
         <title>Ukie</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+        <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height">
             
-        <style>
-            body {
-                padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
-                padding-top: env(safe-area-inset-top); /* iOS 11.2 */
-            }
-        </style>
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-        <script type="text/javascript" charset="utf-8">
-            
-            // Wait for device API libraries to load
-            //
-            document.addEventListener("deviceready", onDeviceReady, false);
-            
-            // device APIs are available
-            //
-            function onDeviceReady() {
+            <style>
+                body {
+                    padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+                    padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+                }
+            </style>
+            <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+            <script type="text/javascript" charset="utf-8">
                 
-                window.plugins.OneSignal
-                .startInit("e485552c-c3ca-4fdc-96bf-1f0702962203")
-                .handleNotificationOpened(notificationOpenedCallback)
-                .endInit();
+                // Wait for device API libraries to load
+                //
+                document.addEventListener("deviceready", onDeviceReady, false);
                 
-                window.plugins.OneSignal.getPermissionSubscriptionState(function(status) {
-                    status.permissionStatus.hasPrompted; // Bool
-                    status.permissionStatus.status; // iOS only: Integer: 0 = Not Determined, 1 = Denied, 2 = Authorized
-                    status.permissionStatus.state; //Android only: Integer: 1 = Authorized, 2 = Denied
+                // device APIs are available
+                //
+                function onDeviceReady() {
                     
-                    status.subscriptionStatus.subscribed; // Bool
-                    status.subscriptionStatus.userSubscriptionSetting; // Bool
-                    status.subscriptionStatus.userId; // String: OneSignal Player ID
-                    status.subscriptionStatus.pushToken; // String: Device Identifier from FCM/APNs
-                    var ref = window.open('https://app.ukie.be/index.php?playerid=' + status.subscriptionStatus.userId, '_blank', 'location=no,toolbar=no,zoom=no');
-                });
-                
-                ref.addEventListener('loadstop', function(event) {});
-                ref.addEventListener('loaderror', function(event) {
-                         window.location.replace('https://google.be')
-                });
-                ref.addEventListener('exit', function(event) {});
-                var notificationOpenedCallback = function(jsonData) {
-                    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-                };
-                
-            }        
-        
-        </script>
-    </head>
+                    
+                    window.plugins.OneSignal
+                    .startInit("e485552c-c3ca-4fdc-96bf-1f0702962203")
+                    .handleNotificationOpened(notificationOpenedCallback)
+                    .endInit();
+                    
+                    window.plugins.OneSignal.getPermissionSubscriptionState(function(status) {
+                        status.permissionStatus.hasPrompted; // Bool
+                        status.permissionStatus.status; // iOS only: Integer: 0 = Not Determined, 1 = Denied, 2 = Authorized
+                        status.permissionStatus.state; //Android only: Integer: 1 = Authorized, 2 = Denied
+                        
+                        status.subscriptionStatus.subscribed; // Bool
+                        status.subscriptionStatus.userSubscriptionSetting; // Bool
+                        status.subscriptionStatus.userId; // String: OneSignal Player ID
+                        status.subscriptionStatus.pushToken; // String: Device Identifier from FCM/APNs
+                        var ref = window.open('https://app.ukie.be/index.php?playerid=' + status.subscriptionStatus.userId, '_blank', 'location=no,toolbar=no,zoom=no');
+                        });
+                        
+                        ref.addEventListener('loadstop', function(event) {
+                                             window.open("refresh.html");
+                        });
+                        ref.addEventListener('loaderror', function(event) {
+                            window.open("refresh.html");
+                        });
+                        ref.addEventListener('exit', function(event) {});
+                        var notificationOpenedCallback = function(jsonData) {
+                              console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+                        };
+                    }
+            
+            </script>
+        </head>
     <body>
     </body>
 </html>
