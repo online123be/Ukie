@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ukie.be" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+      xmlns:gap       = "http://phonegap.com/ns/1.0"
+      xmlns:android   = "http://schemas.android.com/apk/res/android"
+      id              = "com.ukie.be"
+      version         = "1.0.0">
     <name>Ukie</name>
     <description>
         Ukie app
@@ -7,11 +11,7 @@
     <author email="info@online123.be" href="http://ukie.be">
         Ukie
     </author>
-    <widget xmlns       = "http://www.w3.org/ns/widgets"
-      xmlns:gap       = "http://phonegap.com/ns/1.0"
-      xmlns:android   = "http://schemas.android.com/apk/res/android"
-      id              = "com.lumberg.greeeaaat"
-      version         = "1.0.0">
+
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="26" />
