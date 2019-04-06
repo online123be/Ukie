@@ -71,9 +71,6 @@
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
         <splash height="2732" platform="ios" src="www/res/screen/ios/Default@2x~universal~anyany.png" width="2732" />
-        <preference name="StatusBarOverlaysWebView" value="false" />
-        <preference name="StatusBarBackgroundColor" value="#4baab7" />
-        <preference name="StatusBarStyle" value="lightcontent" />
     </platform>
     <platform name="wp8">
         <icon height="99" platform="wp8" src="www/res/icon/wp8/ApplicationIcon.png" width="99" />
